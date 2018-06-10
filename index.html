@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="playNine">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="content/site.css">
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/Controllers/playNineController.js"></script>
+    <title>Document</title>
+</head>
+<body ng-controller="playNineController">
+    <div class="main">
+        <header>
+            <h1>Play Nine</h1>
+        </header>
+
+        <section class="game">
+            <div class="game-body">
+                <div class="content">
+                    <div class="stars">
+                        <span ng-repeat="star in stars">
+                            <i class="fas fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="buttons">
+                        <button ng-click="getStars()"><i class="fas fa-play"></i></button>
+                        <button ng-click="resetGame()"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                    <div class="answers">
+                        <span ng-repeat="answer in answers" 
+                        class="answer {{answer.result}}" >{{answer.value}}</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="numbers">
+                    <ul>
+                        <li ng-repeat="number in numbers">
+                            <button class="number {{number.status}}" 
+                            ng-click="selectNumber(number)">{{number.value}}</button> 
+                        </li>
+                    </ul>
+                    
+                </div>
+                <h1 class="result">{{result}}</h1>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

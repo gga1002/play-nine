@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 19px;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+hr{
+    margin: 5px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 80%;
+}
+
+header{
+    display: grid;
+    grid-template-columns: fit-content(30%) auto;
+    background-color: #4D86B9;
+}
+header h1{
+    color: #fff;
+    background: #78A7D2;
+    margin-left: 1em;
+    padding: 5px 15px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+header ul{
+    list-style: none;
+    float: right;
+    padding-top: 15px;
+}
+header li{
+    display: inline;
+    margin: 1em;
+}
+.game{
+    border-top: #0D4D4D solid 3px;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 20% 80%;
+}
+.game-header{
+    text-align: center;
+    color: #333;
+    padding: 1em;
+}
+.game-body{
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+.buttons{
+    margin: 0 auto;
+    padding: 1em;
+    display: block;
+}
+.buttons button{
+    color: #333;
+    background-color: inherit;
+    border: 0;
+    padding: 10px;
+}
+.content{
+    display: grid;
+    grid-template-columns: 2fr .5fr 2fr;
+    
+}
+.numbers{
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.numbers li{
+    display: inline;
+    padding: 10px;
+}
+
+.number, .answer{
+    background-color: #d3d3d3;
+    color: #333;
+    padding: 0 5px;
+    border-radius: 50%;
+}
+
+.stars, .answers{
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.stars i{
+    color: gold;
+}
+
+.answers span{
+    margin: 5px;
+    text-align: center;
+    width: 20px;
+}
+
+.wrong{
+    background: red;
+}
+
+.correct{
+    background: #2CBD58;
+}
+.selected{
+    background: #849488;
+    color: #333;
+}
+
+.result{
+    font-weight: bold;
+    font-size: 2.5em;
+    margin: 0 auto;
+    padding: 1em;
+}
